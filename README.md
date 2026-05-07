@@ -2,9 +2,7 @@
 
 **A browser game where kids practice their times tables by blasting boogers.** One HTML file. No build, no install, no dependencies.
 
-[**Play it →**](#)
-
-> If the link doesn't work, your GitHub username might use a hyphen — try `https://lucky-belly.github.io/nose-wars-the-game/` instead.
+[**Play it →**](https://luckybelly.github.io/nose-wars-the-game/)
 
 ---
 
@@ -95,24 +93,27 @@ In Times Tables Mode, the math overlay covers the whole screen when ammo runs ou
 It's a single self-contained HTML file. You can just open it in a browser:
 
 ```bash
-open nose_wars_15.html
+open index.html
 ```
 
 Or if you want to serve it (which avoids some browser `file://` quirks):
 
 ```bash
 python3 -m http.server 8000
-# then visit http://localhost:8000/nose_wars_15.html
+# then visit http://localhost:8000/
 ```
 
 No build step. No npm install. No dependencies.
 
 ## Deploying to GitHub Pages
 
-1. Rename `nose_wars_15.html` to `index.html` (or leave it and use the longer URL)
-2. Push to GitHub
-3. Settings → Pages → Source: Deploy from a branch → `main` → `/` (root)
-4. Wait ~1 minute, your URL will be `https://<your-username>.github.io/<repo-name>/`
+The repo is already set up: the game lives in `index.html` at the root, and GitHub Pages serves it automatically at the repo URL.
+
+To deploy your own fork or copy:
+
+1. Push the repo to GitHub with `index.html` at the root
+2. Settings → Pages → Source: Deploy from a branch → `main` → `/` (root)
+3. Wait ~1 minute, your URL will be `https://<your-username>.github.io/<repo-name>/`
 
 ## Save data
 
@@ -134,7 +135,7 @@ That's the only thing it persists. Clearing site data resets it. Times Tables Mo
 - Tuning is rough — ammo size, durations, damage values, and ult costs are first-pass guesses. Play around with them.
 - Tutorial uses Nate as the default. If you want to learn with a specific nose, that's a future addition.
 - The Nosebleed Overlord is the only boss in classic mode (Endless rotates through more variants).
-- Times Tables ammo is currently 8 shots between questions. Easy to bump up or down — search for `TT_AMMO_MAX` in the source.
+- Times Tables ammo is currently 8 shots between questions. Easy to bump up or down — search for `TT_AMMO_MAX` in `index.html`.
 - Bonus and revive questions currently draw from a fixed hard range (11–19 × 11–19). If you want a softer curve, that's a one-line change.
 
 ## Credits
